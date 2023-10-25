@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.menu .header-left a{
+    height:78px;
+    display:flex;
+    float:left;
+    padding:18px ;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    
+    
+    
+}
+.menu .header-left .men{
+    padding-left: 120px;
+    
+}
+.menu .header-left .me{
+    margin-top:30px;
+}
+header{
+    overflow:hidden;
+    height:120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    display:flex;
+    justify-content: space-between;
+
+}
+
+
+.content {
+    margin-top: 60px; 
+}
+nav{
+    background-color:black;
+    color:aliceblue;
+    padding:12px;
+    text-align: center;
+    position: sticky;
+    z-index: 1;
+    margin-top:120px;
+    
+}
+nav .pep{
+    padding:18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    
+    
+    
+}
+nav button{
+    background-color:red;
+    color:aliceblue;
+    height:41px;
+    width:183px;
+    border-radius: 25px;
+    font-weight:700;
+    font-size:15px;
+    
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.prev-button,
+.next-button {
+    width:45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    background: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    height:60px;
+    opacity:0.8;
+}
+
+.prev-button {
+    left:0px;
+}
+
+.next-button {
+   right:0px;
+}
+.child {
+            overflow: hidden;
+            position: relative;
+            width: 250px;
+            height: 200px;
+            
+        }
+
+.child img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            /* Sử dụng transition cho hiệu ứng mượt mà */
+            border-radius:10px;
+        }
+
+.child:hover img {
+            transform: scale(1.1);
+            /* Phóng to hình ảnh khi rê chuột vào */
+            z-index:1;
+        }
+.pa{
+    float:left;
+    padding:12px;
+    text-decoration: none;
+    color:black;
+    margin-bottom: 30px;
+    
+    
+}
+main{
+    width:1140px;
+    margin: 0px 162px 14px;
+}
+.pa a {
+    text-decoration:none;
+    color:black;
+    font-size: 18px;
+    
+    
+}
+.text
+{
+    background-color: rgb(250, 250, 250);
+    height:50px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 10px 10px 20px 0px rgba(200, 188, 188, 0.75);
+        
+}
+.text p{
+    margin-left:15px;
+    
+}
+.pa2 .child {
+            overflow: hidden;
+            position: relative;
+            width: 300px;
+            height: 270px;
+            
+            
+        }
+
+.pa2 .child img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            
+            
+        }
+
+.pa2 .child:hover img {
+            transform: scale(1.1);
+            z-index:1;
+        }
+.pa2{
+    float:left;
+    padding:12px;
+    text-decoration: none;
+    color:black;
+    width:300px;
+    background-color:rgb(254, 254, 254);
+    
+    box-shadow: 10px 10px 20px 0px rgba(200, 188, 188, 0.75);
+    
+}
+.combo{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 90px); 
+    gap:250px;
+    
+    
+}
+
+
+.combo button{
+    width:260px;
+    height:40px;
+    margin-left:10px;
+    background-color: rgb(201, 200, 200);
+    border-style: none;
+    color:aliceblue;
+    border-radius: 15px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+main .nut{
+    font-weight:800px;
+}
+.cothebansethichmonnay h2{
+    width:900px;
+}
+
+.money {
+    display: flex;
+}
+
+.span-text {
+    width: 70%;
+}
+footer{
+    background-color:black;
+    color:aliceblue;
+    
+    
+}
+footer .mh ul{
+    list-style: none; 
+    overflow:hidden; 
+    margin: 0;
+    padding: 0;
+    
+}
+.mh a{
+    text-decoration: none;
+    color:#ABABAB;
+
+}
+.tt{
+    float:left;
+    padding-right:50px;
+    
+    
+}
+.thôngtin{
+    height:350px;
+    margin-left:190px;
+    padding-top:30px;
+    line-height: 1.5;
+}
+footer hr{
+    width:1100px;
+    
+}
+.địachỉ{
+    margin-left: 190px;
+    color:#ABABAB;
+    margin-top:50px;
+    height:250px;
+}
+.địachỉ h2{
+    font-family:  Neue,Helvetica,Arial,sans-serif;
+    font-size:25px;
+    
+}
+.down{
+    margin-top:70px;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    /* Thêm các thuộc tính CSS khác cho header khi được cố định ở vị trí */
+}
+
+</style>
+<body>
+    <header>
+        <section class="menu">
+            <div class="header-left">
+                <a class="men" href=""><img src="https://static.kfcvietnam.com.vn/images/web/kfc-logo.svg?v=5.0"></a>
+                <a class="me">THỰC ĐƠN</a>
+                <a class="me">KHUYẾN MÃI</a>
+                <a class="me">DỊCH VỤ TIỆC</a>
+                <a class="me">HỆ THỐNG NHÀ HÀNG</a>
+             
+            </div>
+            
+        </section>
+        
+    </header>
+    <nav>
+        <section>
+            <span class="pep">Đặt Ngay</span>
+            <span class="pep">Giao Hàng</span>
+            <span class="pep">Hoặc Mang đi</span>
+            <a href="" class="peps"><button>Bắt Đầu Đặt Hàng</button></a>
+        </section>
+    </nav>
+    <banner>
+        <div class="slider-container">
+            <div class="slider">
+                <img src="https://static.kfcvietnam.com.vn/images/content/home/carousel/lg/tnag.webp?v=4jZDe4" alt="Image 1">
+                <img src="https://static.kfcvietnam.com.vn/images/content/home/carousel/lg/1KFC80.webp?v=4jZDe4" alt="Image 2">
+                <img src="	https://static.kfcvietnam.com.vn/images/content/home/carousel/lg/KFC50.webp?v=LZKGp4" alt="Image 3">
+                <img src="https://static.kfcvietnam.com.vn/images/content/home/carousel/lg/GaQueKem.webp?v=LZKGp4" alt="Image 4">
+                <img src="https://static.kfcvietnam.com.vn/images/content/home/carousel/lg/combo-dinner.webp?v=LZKGp4" alt="Image 55">      
+            </div>
+            <button class="prev-button">&lt;</button>
+            <button class="next-button">&gt;</button>
+        </div>
+    </banner>
+    <main>
+        <div class="danhmucmonan">
+            <h2>DANH MỤC MÓN ĂN</h2>
+            <div class="pa">
+               <a href="">
+                    <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/KHUYEN%20MAI.jpg?v=3o9wl4">
+                    </div>
+                    <div class="text">
+                       <p><strong>Ưu Đãi</strong> </p> 
+                    </div>
+               </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                     <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/MON%20MOI.jpg?v=3o9wl4">
+                     </div>
+                     <div class="text">
+                        <p><strong>Món Mới</strong> </p> 
+                     </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                    <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/COMBO%201%20NGUOI.jpg?v=3o9wl4">
+                    </div>
+                     <div class="text">
+                        <p><strong>Combo 1 Người</strong> </p> 
+                     </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                     <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/COMBO%20NHOM.jpg?v=3o9wl4">
+                     </div>
+                     <div class="text">
+                        <p><strong>Combo Nhóm</strong> </p> 
+                     </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                       <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/GA.jpg?v=3o9wl4">
+                       </div> 
+                     <div class="text">
+                         <p><strong>Gà Rán- Gà Quay</strong></p>
+                     </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                     <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/COM.jpg?v=3o9wl4">
+                     </div>
+                     <div class="text">
+                         <p><strong>Burger-Cơm-Mì Ý </strong></p>
+                     </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                    <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/MON%20AN%20NHE.jpg?v=3o9wl4">
+                    </div>
+                    <div class="text">
+                         <p><strong>Thức Ăn Nhẹ</strong> </p>
+                    </div>
+                </a>
+            </div>
+            <div class="pa">
+                <a href="">
+                     <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/category/lg/TRANG%20MIENG.jpg?v=3o9wl4">
+                     </div>
+                     <div class="text">
+                         <p><strong>Thức Uống & Tráng Miệng</strong></p>
+                     </div>
+                </a>
+            </div>
+        </div>
+        <div class="cothebansethichmonnay">
+            <h2> CÓ THỂ BẠN SẼ THÍCH MÓN NÀY 
+
+            </h2>
+            <div class="combo">
+                <div class="pa2">
+                    <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/items/lg/D6.jpg?v=3o9wl4">
+                    </div>
+                    <div class="tencombo">
+                        <div class="t">
+                            <strong class="money">
+                                <p class="span-text">Combo Nhóm 1</p>
+                                <p>172.000₫</p>
+                            </strong>
+                        </div> 
+                        <p>3 Miếng Gà + 1 Burger Zinger/Burger Tôm/Burger Phi-lê Gà Quay + 2 Lon Pepsi</p>
+                    </div>
+                    <div class="nut">
+                        <button><strong>Thêm</strong></button>
+                    </div>
+                </div>
+                <div class="pa2">
+                    <div class="child">
+                        <img src="https://static.kfcvietnam.com.vn/images/items/lg/D7-new.jpg?v=3o9wl4">
+                    </div>
+                    <div class="tencombo"> 
+                        <div class="t">  
+                            <strong class="money">
+                                <p class="span-text">Combo Nhóm 2</p>
+                                <p>191.000₫</p>
+                            </strong>
+                        </div>
+                         <p>4 Miếng Gà + 1 Khoai tây chiên lớn/ 2 Thanh Bí Phô-mai + 2 Lon Pepsi</p>
+                        
+                    </div>
+                    <div class="nut"> 
+                        <button><strong>Thêm</strong></button>
+                    </div>
+                </div>
+                <div class="pa2">
+                    <div class="child">
+                        <img src="	https://static.kfcvietnam.com.vn/images/items/lg/D8-new.jpg?v=3o9wl4">
+                    </div>
+                    <div class="tencombo">
+                        <div class="t">
+                            <strong class="money">
+                                <p class="span-text">Combo Nhóm 3</p>
+                                <p>228.000₫</p>
+                            </strong>
+                        </div>
+                        
+                        <p>5 Miếng Gà + 1 Popcorn (Vừa) / 4 Gà Miếng Nuggets + 2 Lon Pepsi</p>
+                    </div>
+                    <div class="nut">
+                        <button><strong>Thêm</strong></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <div class="down">
+        <img src="https://static.kfcvietnam.com.vn/images/content/home/mobileappbanner/lg/banner.jpg?v=3o9wl4" width="100%">
+       
+    </div>
+    <footer>
+        <div>
+            <div class="thôngtin">
+                <div class="tt">
+                    <h3>Danh Mục Món Ăn</h6>
+                    <div class="mh">
+                        <uL>
+                            <li><a href="">Ưu Đãi</a></li>
+                            <li><a href="">Món Mới</a></li>
+                            <li><a href="">Combo 1 Người</a></li>
+                            <li><a href="">Combo Nhóm</a></li>
+                            <li><a href="">Gà Rán - Gà Quay</a></li>
+                            <li><a href="">Burger - Cơm - Mì Ý</a></li>
+                            <li><a href="">Thức Ăn Nhẹ</a></li>
+                            <li><a href="">Thức Uống & Tráng Miệng</a></li>
+                        </uL>
+                    </div>
+                </div>
+                <div class="tt">
+                    <h3>Về KFC</h6>
+                    <div class="mh">
+                        <uL>
+                            <li><a href="">Câu Chuyện Của Chúng Tôi</a></li>
+                            <li><a href="">Tin Khuyến Mãi</a></li>
+                            <li><a href="">Tin tức KFC</a></li>
+                            <li><a href="">Tuyển dụng</a></li>
+                            <li><a href="">Đặt tiệc Sinh nhật</a></li>
+                        </uL>
+                    </div>
+                </div>
+                <div class="tt">
+                    <h3>Liên hệ KFC</h6>
+                    <div class="mh">
+                        <uL>
+                            <li><a href="">Theo dõi đơn hàng</a></li>
+                            <li><a href="">Hệ Thống Nhà Hàng</a></li>
+                            <li><a href="">Liên hệ KFC</a></li>
+                        </uL>
+                    </div>
+                </div>
+                <div class="tt">
+                    <h3>Chính sách</h6>
+                    <div class="mh">
+                        <uL>
+                            <li><a href="">Chính sách hoạt động</a></li>
+                            <li><a href="">Chính sách và quy định</a></li>
+                            <li><a href="">Chính sách bảo mật thông tin</a></li>
+                        </uL>
+                    </div>
+                </div>
+                <div class="tt">
+                    <h3>Download App</h3>
+                    <div class="hình">
+                       <a href=""> <img src="https://logos-download.com/wp-content/uploads/2016/06/Download_on_the_App_Store_logo.png" width="150px"></a>
+                       <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png " width="150px"></a>
+                    </div>
+                </div>
+            </div>  
+            <div class="link"></div>
+            <hr>
+            <div class="địachỉ">
+                <h2>CÔNG TY LIÊN DOANH TNHH KFC VIỆT NAM</h2>
+                <div class="dc">Số 292 Bà Triệu, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội.</div>
+                <div class="dc">Điện thoại: (028) 38489828</div>
+                <div class="dc">Email: lienhe@kfcvietnam.com.vn</div>
+                <div class="dc">Mã số thuế: 0100773885</div>
+                <div class="dc">Ngày cấp: 29/10/1998 - Nơi cấp: Cục Thuế Thành Phố Hà Nội</div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let slider = document.querySelector('.slider');
+let images = document.querySelectorAll('.slider img');
+let prevButton = document.querySelector('.prev-button');
+let nextButton = document.querySelector('.next-button');
+let currentIndex = 0;
+let startX = 0;
+let isDragging = false;
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateSlider();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateSlider();
+}
+
+function updateSlider() {
+    let newPosition = -currentIndex * images[0].clientWidth;
+    slider.style.transform = `translateX(${newPosition}px)`;
+}
+
+nextButton.addEventListener('click', nextSlide);
+prevButton.addEventListener('click', prevSlide);
+
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+});
+
+slider.addEventListener('touchmove', (e) => {
+    if (isDragging) {
+        let deltaX = e.touches[0].clientX - startX;
+        let newPosition = -currentIndex * images[0].clientWidth + deltaX;
+        slider.style.transform = `translateX(${newPosition}px)`;
+    }
+});
+
+slider.addEventListener('touchend', (e) => {
+    isDragging = false;
+    let deltaX = e.changedTouches[0].clientX - startX;
+    if (Math.abs(deltaX) > 50) {
+        if (deltaX > 0) {
+            prevSlide();
+        } else {
+            nextSlide();
+        }
+    } 
+    else {
+        updateSlider();
+    }
+});
+
+setInterval(nextSlide, 3000); 
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('.header');
+    var scrollPosition = window.scrollY;
+
+    if (scrollPosition > 200) {
+        header.classList.add('fixed-header');
+    } else {
+        header.classList.remove('fixed-header');
+    }
+});
+</script>
+
+</body>
+</html>
